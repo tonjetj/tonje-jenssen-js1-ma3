@@ -17,6 +17,7 @@ async function getResults() {
     for (let i = 0; i < facts.length; i++) {
       console.log(facts[i].name);
       console.log(facts[i].rating);
+      console.log(facts[i].rating_top);
       console.log(facts[i].tags);
       if (i === 8) {
         break;
@@ -24,7 +25,7 @@ async function getResults() {
       resultsContainer.innerHTML += `
       <div class="result">
             <p class="gamename">${facts[i].name}</p>
-            <p>Rating: ${facts[i].rating}</p>
+            <p>Rating: ${facts[i].rating} / ${facts[i].rating_top}</p>
             <p>Tags: ${facts[i].tags.length}</p>
         </div>`;
     }
